@@ -1,0 +1,4 @@
+service {
+	"DA_AV.T_CUSTOMERS"
+	  as "Customers";
+}

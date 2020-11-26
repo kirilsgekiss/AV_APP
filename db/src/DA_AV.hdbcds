@@ -1,0 +1,14 @@
+context DA_AV {
+	type SString  : String(40);
+	entity T_CUSTOMERS {
+    key CUSTOMER_ID      : Integer;
+        CUST_NICKNAME    : SString;
+        CUST_SOCIAL_NET  : SString;
+	}
+	entity T_CAMERAS {
+    key CAMERA_ID   	: SString;
+        CAMERA_BRAND    : SString;
+        CAMERA_MODEL	: SString;
+        CAMERA_DEFECT	: SString;
+	}
+};

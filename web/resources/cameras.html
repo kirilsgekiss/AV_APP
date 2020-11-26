@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv='Content-Type' content='text/html;charset=UTF-8' />
+<title>Cameras</title>
+<!-- 1.) Load SAPUI5 (from a remote server), select theme and control library -->
+<script src="https://sapui5.hana.ondemand.com/resources/sap-ui-core.js"
+	id="sap-ui-bootstrap" data-sap-ui-libs="sap.m, sap.ui.table"
+	data-sap-ui-theme="sap_bluecrystal">
+</script>
+<script>
+
+	var oModel = new sap.ui.model.odata.v2.ODataModel("/xsodata/cameras.xsodata", true);
+	var oTable = new sap.ui.table.Table({ title: "Camera" });
+	oTable.addColumn(new sap.ui.table.Column({ label: "Camera ID", template: "CAMERA_ID" }));
+	oTable.addColumn(new sap.ui.table.Column({ label: "Brand", template: "CAMERA_BRAND" }));
+	oTable.addColumn(new sap.ui.table.Column({ label: "Model", template: "CAMERA_MODEL" }));
+	oTable.addColumn(new sap.ui.table.Column({ label: "Defects", template: "CAMERA_DEFECT" }));	
+	oTable.setModel(oModel);
+	oTable.placeAt("uiArea");
+
+	</script>
+</head>
+<body class="sapUiBody">
+	<div id="uiArea"></div>
+</body>
+</html>
